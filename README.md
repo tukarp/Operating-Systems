@@ -43,7 +43,7 @@
 
 ## Programowanie 
 
-### Komendy w języku C
+### Komendy w języku ```C```
 
 - ```open``` - komenda służąca do otwarcia pliku,
 - ```close``` - komenda służąca do zamknięcia pliku,
@@ -68,7 +68,7 @@ identyfikatora przez użytkownika,
 
 ## Procesy
 
-### Komendy w języku C
+### Komendy w języku ```C```
 
 - ```int fork( void )``` - komenda służąca do utworzenia procesu potomnego,
 - ```int getpid(void)``` - komenda służąca do zwrócenie własnego identyfikatora procesu,
@@ -122,7 +122,7 @@ procesów wartości status,
 
 ## Wątki
 
-### Komendy w języku C
+### Komendy w języku ```C```
 
 - ```pthread_create(pthread_t * thread, pthread_attr_t * attr, void * (*start_routine) (void*), void * arg)``` - komenda służąca do utworzenia wątku,
 - ```pthread_t *thread``` - komenda służąca do identyfikacji wątku w systemie,
@@ -136,7 +136,7 @@ procesów wartości status,
 
 ## Pamięć współdzielona
 
-### Komendy
+### Komendy w języku ```C```
 
 - ```int shmget (key_t key, size_t size, int shmflags)``` - komenda służąca do utworzenia nowego segmentu pamięci dzielonej, lub uzyskania identyfikatora, a ty samym dostęp do segmentu już istniejącego,
 - ```int shmctl (int shmid, int cmd, struct shmid_ds *buf)``` - komenda służąca do modyfikowania oraz odczytu rozmaitych właściwości segmentu pamięci dzielonej, a także do jego kasowania,
