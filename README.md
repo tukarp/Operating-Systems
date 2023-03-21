@@ -4,9 +4,20 @@
 
 ### Laboratoria
 
-- [Laboratoria]()
-- [Zestaw 1]()
-- [Zestaw 2]()
+- [Laboratoria](#laboratoria)
+- [Zestaw 1](#zestaw-1)
+- [Zestaw 2](#zestaw-2)
+
+### Rozwiązania
+
+- [Zestaw 1](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%201.c)
+- [Zestaw 2 - Zadanie 1](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%202.1.c)
+- [Zestaw 2 - Zadanie 2](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%202.2.c)
+
+### Notatki
+
+
+
 
 # Laboratoria
 
@@ -27,6 +38,8 @@ Napisz program, który utworzy 3 procesy potomne. Poniższy schemat przedstawia 
 
 Napisz program, który utworzy dwóch potomków. Jeden z nich wyświetli ścieżkę bieżącego katalogu, drugi wyświetli listę procesów. Zadanie należy wykonać z użyciem funkcji exec.
 
+[Rozwiązanie](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%201.c)
+
 ## Zestaw 2
 
 ### Zadanie 1
@@ -41,8 +54,10 @@ Napisz program, który utworzy poniższą strukturę:
 
 Proces macierzysty powinien wyświetlać ile znaków zapisano do plik1. Nie używać poleceń z użyciem funkcji system().
 
+[Rozwiązanie](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%202.1.c)
+
 ### Zadanie 2
 
 Napisz program który utworzy ```n``` potomków. Liczbę ```n``` podaje użytkownik. Każdy potomek przekazuję liczbę z zakresu od ```1-100``` - podana przez użytkownika. Proces macierzysty generuje losowo liczbę z zakresu ```1-100```, wyświetla ją i porównuje z wartościami przekazanymi przez jej potomków. Wyświetla odpowiednie komunikaty dla mniejszej liczby, równej i większej.
 
-
+[Rozwiązanie](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%202.2.c)
