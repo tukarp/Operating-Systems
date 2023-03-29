@@ -1,4 +1,4 @@
-# Operating-Systems
+# Systemy Operacyjne
 
 ## Spis treści
 
