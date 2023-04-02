@@ -10,18 +10,18 @@
 
 ### Notatki
 
-- [Notatki](#notatki)
+- [Notatki](#notatki-1)
 - [Programowanie](#programowanie)
-  - [Komendy w języku ```C```](komendy-w-języku-c)
-  - [Prawa dostępu jako argumenty funkcji](prawa-dostępu-jako-argumenty-funkcji)
+  - [Komendy w języku ```C```](#komendy-w-języku-c)
+  - [Prawa dostępu jako argumenty funkcji](#prawa-dostępu-jako-argumenty-funkcji)
 - [Procesy](#procesy)
-  - [Komendy w języku ```C```](komendy-w-języku-c)
+  - [Komendy w języku ```C```](#komendy-w-języku-c-1)
   - [Komenda ```ps```](#komenda-ps)
   - [Komenda ```top```](#komenda-top)
 - [Wątki](#wątki)
-  - [Komendy w języku ```C```](#komendy-w-języku-c)
+  - [Komendy w języku ```C```](#komendy-w-języku-c-2)
 - [Pamięć współdzielona](#pamięć-współdzielona)
-  - [Komendy w języku ```C```](#komendy-w-języku-c)
+  - [Komendy w języku ```C```](#komendy-w-języku-c-3)
 
 ### Strategie obsługi procesów
 
