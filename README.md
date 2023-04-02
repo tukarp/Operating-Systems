@@ -4,7 +4,7 @@
 
 ### Laboratoria
 
-- [Laboratoria](#laboratoria)
+- [Laboratoria](#laboratoria-1)
 - [Zestaw 1](#zestaw-1)
 - [Zestaw 2](#zestaw-2)
 
