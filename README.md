@@ -8,11 +8,20 @@
 - [Zestaw 1](#zestaw-1)
 - [Zestaw 2](#zestaw-2)
 
-### Rozwiązania
+### Notatki
 
-- [Zestaw 1](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%201.c)
-- [Zestaw 2 - Zadanie 1](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%202.1.c)
-- [Zestaw 2 - Zadanie 2](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%202.2.c)
+- [Notatki](#notatki)
+- [Programowanie](#programowanie)
+  - [Komendy w języku ```C```](komendy-w-języku-c)
+  - [Prawa dostępu jako argumenty funkcji](prawa-dostępu-jako-argumenty-funkcji)
+- [Procesy](#procesy)
+  - [Komendy w języku ```C```](komendy-w-języku-c)
+  - [Komenda ```ps```](#komenda-ps)
+  - [Komenda ```top```](#komenda-top)
+- [Wątki](#wątki)
+  - [Komendy w języku ```C```](#komendy-w-języku-c)
+- [Pamięć współdzielona](#pamięć-współdzielona)
+  - [Komendy w języku ```C```](#komendy-w-języku-c)
 
 ### Strategie obsługi procesów
 
