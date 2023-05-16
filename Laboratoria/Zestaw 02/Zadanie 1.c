@@ -36,7 +36,7 @@ int main() {
 	
 	// Potomek 2
 	if(fork()) {
-	  printf("2.Potomek, Proces %i, potomek %i \n", getpid(), getppid());
+	  	printf("2.Potomek, Proces %i, potomek %i \n", getpid(), getppid());
 		int file1 = open("plik1.txt", O_RDONLY, 0777);
 		int file2 = open("plik2.txt", O_CREAT|O_WRONLY|O_RDONLY, 0777);
 		char buff[size];
@@ -53,22 +53,20 @@ int main() {
 				printf("plik2 nie ma mozliwosci odczytu \n");
 			}
 			
-			
 			if(access(path2, W_OK)) {
 				printf("plik2 ma mozliwosc zapisu \n");
 			} else {
 				printf("plik2 nie ma mozliwosc zapisu \n");
 			}
 			
-			
 			if(access(path2, X_OK)) {
 				printf("plik2 ma mozliwosc wykonania \n");
 			} else {
 				printf("plik2 nie ma mozliwosc wykonania \n");
 			}
-			
-	    exit(0);
-	  }
+
+	    	exit(0);
+		}
 	close(file1);
 	close(file2);
   
