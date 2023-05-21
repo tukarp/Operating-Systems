@@ -44,9 +44,38 @@
   - [Strategia SRTF - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%2001.png)
   - [Strategia SRTF - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%2002.png)
   - [Strategia SRTF - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%2003.png)
-- [Czas 01](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%2001.jpg)
-- [Czas 02](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%2002.jpg)
-- [Czas 03](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%2003.jpg)
+
+### Czasy
+
+- ```Czas 1```
+
+| Proces | Czas Przybycia | Czas Wykonania |
+| :----: | :------------: | :------------: |
+| P1     |        0       |        5       |
+| P2     |        1       |        2       |
+| P3     |        1       |        5       |
+| P4     |        6       |        2       |
+| P5     |        8       |        1       |
+
+- ```Czas 2```
+
+| Proces | Czas Przybycia | Czas Wykonania |
+| :----: | :------------: | :------------: |
+| P1     |        0       |        3       |
+| P2     |        1       |        5       |
+| P3     |        2       |        2       |
+| P4     |        7       |        4       |
+| P5     |        8       |        1       |
+
+- ```Czas 3```
+
+| Proces | Czas Przybycia | Czas Wykonania |
+| :----: | :------------: | :------------: |
+| P1     |        0       |       10       |
+| P2     |        0       |       5        |
+| P3     |        0       |       4        |
+| P4     |        6       |       8        |
+| P5     |        6       |       3        |
 
 # Notatki
 
