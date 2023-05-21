@@ -5,8 +5,8 @@
 ### Laboratoria
 
 - [Laboratoria](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria)
-- [Zestaw 1](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%2001)
-- [Zestaw 2](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%2002)
+- [Zestaw 01](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%2001)
+- [Zestaw 02](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%2002)
 
 ### Notatki
 
@@ -27,26 +27,26 @@
 
 - [Strategie Obsługi Procesów](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w.pdf)
 - [Strategia FCFS](https://github.com/tukarp/Operating-Systems/tree/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS)
-  - [Strategia FCFS - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS/Strategia%20FCFS%20-%20Czas%201.png)
-  - [Strategia FCFS - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS/Strategia%20FCFS%20-%20Czas%202.png)
-  - [Strategia FCFS - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS/Strategia%20FCFS%20-%20Czas%203.png)
+  - [Strategia FCFS - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS/Strategia%20FCFS%20-%20Czas%2001.png)
+  - [Strategia FCFS - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS/Strategia%20FCFS%20-%20Czas%2002.png)
+  - [Strategia FCFS - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS/Strategia%20FCFS%20-%20Czas%2003.png)
 - [Strategia RR](https://github.com/tukarp/Operating-Systems/tree/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR)
   - [Strategia RR Kwant czasu 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%201/Strategia%20RR%20Kwant%20czasu%201.png)
-  - [Strategia RR, Kwant Czasu = 2 - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%2C%20Kwant%20Czasu%20%3D%202%20-%20Czas%201.png)
-  - [Strategia RR, Kwant Czasu = 2 - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%2C%20Kwant%20Czasu%20%3D%202%20-%20Czas%202.png)
-  - [Strategia RR, Kwant Czasu = 2 - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%2C%20Kwant%20Czasu%20%3D%202%20-%20Czas%203.png)
+  - [Strategia RR, Kwant Czasu = 2 - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%2C%20Kwant%20Czasu%20%3D%202%20-%20Czas%2001.png)
+  - [Strategia RR, Kwant Czasu = 2 - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%2C%20Kwant%20Czasu%20%3D%202%20-%20Czas%2002.png)
+  - [Strategia RR, Kwant Czasu = 2 - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%2C%20Kwant%20Czasu%20%3D%202%20-%20Czas%2003.png)
   - [Strategia RR](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Strategia%20RR.png)
 - [Strategia SJF](https://github.com/tukarp/Operating-Systems/tree/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SJF)
-  - [Strategia SJF - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SJF/Strategia%20SJF%20-%20Czas%201.png)
-  - [Strategia SJF - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SJF/Strategia%20SJF%20-%20Czas%202.png)
-  - [Strategia SJF - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SJF/Strategia%20SJF%20-%20Czas%203.png)
+  - [Strategia SJF - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SJF/Strategia%20SJF%20-%20Czas%2001.png)
+  - [Strategia SJF - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SJF/Strategia%20SJF%20-%20Czas%2002.png)
+  - [Strategia SJF - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SJF/Strategia%20SJF%20-%20Czas%2003.png)
 - [Strategia SRTF](https://github.com/tukarp/Operating-Systems/tree/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF)
-  - [Strategia SRTF - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%201.png)
-  - [Strategia SRTF - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%202.png)
-  - [Strategia SRTF - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%203.png)
-- [Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%201.jpg)
-- [Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%202.jpg)
-- [Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%203.jpg)
+  - [Strategia SRTF - Czas 1](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%2001.png)
+  - [Strategia SRTF - Czas 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%2002.png)
+  - [Strategia SRTF - Czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20SRTF/Strategia%20SRTF%20-%20Czas%2003.png)
+- [Czas 01](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%2001.jpg)
+- [Czas 02](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%2002.jpg)
+- [Czas 03](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Czas%2003.jpg)
 
 # Notatki
 
