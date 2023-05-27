@@ -1,6 +1,6 @@
 # Systemy Operacyjne
 
-## Zestaw 3
+## Zestaw 03
 
 ### Zadanie
 
