@@ -7,6 +7,7 @@
 - [Laboratoria](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria)
 - [Zestaw 01](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%2001)
 - [Zestaw 02](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%2002)
+- [Zestaw 03](https://github.com/tukarp/Operating-Systems/blob/main/Laboratoria/Zestaw%2003)
 
 ### Notatki
 

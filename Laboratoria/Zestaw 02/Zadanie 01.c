@@ -1,9 +1,9 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <fcntl.h>
 #include <string.h>
+#include <stdio.h>
 #include <ctype.h>
+#include <fcntl.h>
 
 // Main
 int main() {

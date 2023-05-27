@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <string.h>
-#include <ctype.h>
-#include <time.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <fcntl.h>
+#include <time.h>
 
 // Main
 int main() {
