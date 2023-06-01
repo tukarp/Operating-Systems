@@ -112,7 +112,7 @@ identyfikatora przez użytkownika,
 
 ### Komendy w języku ```C```
 
-- ```int fork( void )``` - komenda służąca do utworzenia procesu potomnego,
+- ```int fork(void)``` - komenda służąca do utworzenia procesu potomnego,
 - ```int getpid(void)``` - komenda służąca do zwrócenie własnego identyfikatora procesu,
 - ```void exit(int status)``` - komenda służąca do przekazania w odpowiednie miejsce tablicy
 procesów wartości status,
