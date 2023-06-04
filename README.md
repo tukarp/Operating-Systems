@@ -116,8 +116,8 @@ identyfikatora przez użytkownika,
 - ```int getpid(void)``` - komenda służąca do zwrócenie własnego identyfikatora procesu,
 - ```void exit(int status)``` - komenda służąca do przekazania w odpowiednie miejsce tablicy
 procesów wartości status,
-- ```int wait(int *status)``` - komenda służąca do czekania ze względu na status,
-- ```int waitpid(int pid, int *status, int options)``` - komenda służąca do czekania ze względu na status wątku.
+- ```int wait(int * status)``` - komenda służąca do czekania ze względu na status,
+- ```int waitpid(int pid, int * status, int options)``` - komenda służąca do czekania ze względu na status wątku.
 
 ### Komenda ```ps```
 
@@ -166,12 +166,12 @@ procesów wartości status,
 
 ### Komendy w języku ```C```
 
-- ```pthread_create(pthread_t * thread, pthread_attr_t * attr, void * (*start_routine) (void*), void * arg)``` - komenda służąca do utworzenia wątku,
-- ```pthread_t *thread``` - komenda służąca do identyfikacji wątku w systemie,
-- ```pthread_attr_t *attr``` - komenda służąca do określenia atrubutów wątku,
-- ```void* (*start_routine) (void*)``` - nazwa funkcji do wykonania dla tworzonego wątku,
-- ```pthread_exit(void *retval)``` - komenda służąca do zakończenia wątku,
-- ```pthread_join(pthread_t th, void **thread_return)``` - komenda służąca do oczekiwania na zakończenie wątku,
+- ```pthread_create(pthread_t * thread, pthread_attr_t * attr, void * (* start_routine) (void *), void * arg)``` - komenda służąca do utworzenia wątku,
+- ```pthread_t * thread``` - komenda służąca do identyfikacji wątku w systemie,
+- ```pthread_attr_t * attr``` - komenda służąca do określenia atrubutów wątku,
+- ```void*(* start_routine) (void *)``` - nazwa funkcji do wykonania dla tworzonego wątku,
+- ```pthread_exit(void * retval)``` - komenda służąca do zakończenia wątku,
+- ```pthread_join(pthread_t th, void ** thread_return)``` - komenda służąca do oczekiwania na zakończenie wątku,
 - ```pthread_cancel``` - komenda służąca do zakończenia wykonywania innego wątku,
 - ```pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER``` - komenda służąca do zapewnienia wzajemnego wykluczania,
 - ```pthread_cond_t cond = PTHREAD_COND_INITIALIZER``` - komenda służąca do synchronizacja za pomocą zmiennych warunkowych polegająca na usypianiu i budzeniu wątku w sekcji krytycznej.
@@ -180,9 +180,9 @@ procesów wartości status,
 
 ### Komendy w języku ```C```
 
-- ```int shmget (key_t key, size_t size, int shmflags)``` - komenda służąca do utworzenia nowego segmentu pamięci dzielonej, lub uzyskania identyfikatora, a ty samym dostęp do segmentu już istniejącego,
-- ```int shmctl (int shmid, int cmd, struct shmid_ds *buf)``` - komenda służąca do modyfikowania oraz odczytu rozmaitych właściwości segmentu pamięci dzielonej, a także do jego kasowania,
-- ```char* shmat (int shmid, char* shmaddr, int shmflg)``` - komenda służąca do przyłączenia segmentu pamięci dzielonej do przestrzeni
+- ```int shmget(key_t key, size_t size, int shmflags)``` - komenda służąca do utworzenia nowego segmentu pamięci dzielonej, lub uzyskania identyfikatora, a ty samym dostęp do segmentu już istniejącego,
+- ```int shmctl(int shmid, int cmd, struct shmid_ds * buf)``` - komenda służąca do modyfikowania oraz odczytu rozmaitych właściwości segmentu pamięci dzielonej, a także do jego kasowania,
+- ```char * shmat(int shmid, char * shmaddr, int shmflg)``` - komenda służąca do przyłączenia segmentu pamięci dzielonej do przestrzeni
 adresowej procesu,
-- ```char* shmdt (char* shmaddr)``` - komenda służąca do odłączania segmentu
+- ```char * shmdt(char * shmaddr)``` - komenda służąca do odłączania segmentu
 pamięci wspólnej od procesu.
