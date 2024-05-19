@@ -32,7 +32,6 @@ int main() {
 
 			exit(0);		
 		}
-
 		close(file1);
 		exit(0);
 	}
@@ -61,9 +60,8 @@ int main() {
 			if (access(FILE_PATH2, X_OK)) printf("Plik %s ma mozliwosc wykonania \n", FILE_PATH2);
 			else printf("Plik %s nie ma mozliwosc wykonania \n", FILE_PATH2);
 
-	    	exit(0);
+	    		exit(0);
 		}
-
 		close(file1);
 		close(file2);
 		exit(0);
