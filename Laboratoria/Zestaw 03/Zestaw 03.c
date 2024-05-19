@@ -9,134 +9,111 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-// Zainicjalizowanie mutexa jako PTHREAD_MUTEX_INITIALIZER
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
-// Utworzenie globalnych zmiennych do obliczeń - a oraz b
+const char* START_MESSAGE = "Podawaj dwie liczby: "
+const char* CREATE_THREAD_ERROR_MESSAGE = "Blad tworzenia watku\n";
+const char* JOIN_THREAD_ERROR_MESSAGE = "Blad dolaczania watku\n"
+
 int a;
 int b;
 
-// Funkcja dodająca dwie liczby przy użyciu wątków
+/**
+ * Funkcja przeprowadzająca operacje dodawania z blokowaniem zmiennej podczas przeprowadzania operacji
+ *
+ * @param args Argumenty operacji
+ */
 void * addition(void *args) {
-    // Odblokowanie mutexa
 	pthread_mutex_unlock(&mutex);
-	// Zainicjalizowanie result jako wynik dodawania a i b
-    int result = a + b;
-    // Wyświetlenie wyniku dodawania
-	printf("Addition result:        %i + %i = %i \n", a, b, result);	
-	// Zamknięcie mutexa
+    int result = (a + b);
+	printf("%i + %i = %i \n", a, b, result);	
 	pthread_mutex_lock(&mutex);
 }
 
-// Funkcja odejmująca dwie liczby przy użyciu wątków
+/**
+ * Funkcja przeprowadzająca operacje odejmowania z blokowaniem zmiennej podczas przeprowadzania operacji
+ *
+ * @param args Argumenty operacji
+ */
 void * subtraction(void *args) {
-    // Odblokowanie mutexa
     pthread_mutex_unlock(&mutex);
-    // Zainicjalizowanie result jako wynik odejmowania a i b
-    int result = a - b;
-    // Wyświetlenie wyniku odejmowania
-	printf("Subtraction result:     %i - %i = %i \n", a, b, result);
-	// Zamknięcie mutexa
+    int result = (a - b);
+	printf("%i - %i = %i \n", a, b, result);
 	pthread_mutex_lock(&mutex);
 }
 
-// Funkcja mnożąca dwie liczby przy użyciu wątków
+/**
+ * Funkcja przeprowadzająca operacje mnożenia z blokowaniem zmiennej podczas przeprowadzania operacji
+ *
+ * @param args Argumenty operacji
+ */
 void * multiplication(void *args) {
-    // Odblokowanie mutexa
 	pthread_mutex_unlock(&mutex);
-	// Zainicjalizowanie result jako wynik mnożenia a i b
-    int result = a * b;
-    // Wyświetlenie wyniku mnożenia
-	printf("Multiplication result:  %i * %i = %i \n", a, b, result);
-	// Zamknięcie mutexa
+    int result = (a * b);
+	printf("%i * %i = %i \n", a, b, result);
 	pthread_mutex_lock(&mutex);
 }
 
-// Funkcja dzieląca dwie liczby przy użyciu wątków
+/**
+ * Funkcja przeprowadzająca operacje dzielenia z blokowaniem zmiennej podczas przeprowadzania operacji
+ *
+ * @param args Argumenty operacji
+ */
 void * division(void *args) {
-    // Odblokowanie mutexa
 	pthread_mutex_unlock(&mutex);
-	// Zainicjalizowanie result jako wynik dzielenia a i b
-    int result = a / b;
-    // Wyświetlenie wyniku dzielenia
-	printf("Division result:        %i / %i = %i \n", a, b, result);
-	// Zamknięcie mutexa
+    int result = (a / b);
+	printf("%i / %i = %i \n", a, b, result);
 	pthread_mutex_lock(&mutex);
 }
 
-// Main
 int main() {
-    // Utworzenie wątków
-	pthread_t thread_addition;              // Wątek dodawania
-	pthread_t thread_subtraction;           // Wątek odejmowania
-	pthread_t thread_multiplication;        // Wątek mnożenia
-	pthread_t thread_division;              // Wątek dzielenia
+	pthread_t thread_addition;
+	pthread_t thread_subtraction;
+	pthread_t thread_multiplication;
+	pthread_t thread_division;
 	
-	// Wyświetlenie informacji o podaniu parametrów na standardowym wejściu
-	printf("Enter two numbers: ");
-	// Przyjęcie dwóch liczb - a i b na standardowym wejściu
+	printf(START_MESSAGE);
 	scanf("%d %d \n", &a, &b);
-	
-	// Utworzenie wątku dodawania
-	if(pthread_create(&thread_addition, NULL, addition, NULL)) {
-	    // Informacja o błędzie podczas tworzenia wątku
-		printf("Creating Thread Error!\n");
-		// Przerwanie tworzenia wątku
+
+	if (pthread_create(&thread_addition, NULL, addition, NULL)) {
+		printf(CREATE_THREAD_ERROR_MESSAGE);
 		abort();
 	}
-	
-	// Dołączanie wątku dodawania
-	if(pthread_join(thread_addition, NULL)) {
-	    // Informacja o błędzie podczas dołączania wątku
-		printf("Attaching Thread Error!\n");
-		// Przerwanie dołączania wątku
+
+	if (pthread_join(thread_addition, NULL)) {
+		printf(JOIN_THREAD_ERROR_MESSAGE);
 		exit(0);
 	}
-	
-	// Utworzenie wątku odejmowania
-	if(pthread_create(&thread_subtraction, NULL, subtraction, NULL)) {
-	    // Informacja o błędzie podczas tworzenia wątku
-		printf("Creating Thread Error!\n");
-		// Przerwanie tworzenia wątku
+
+	if (pthread_create(&thread_subtraction, NULL, subtraction, NULL)) {
+		printf(CREATE_THREAD_ERROR_MESSAGE);
 		abort();
 	}
-	
-	// Dołączanie wątku odejmowania
-	if(pthread_join(thread_subtraction, NULL)) {
-		printf("Attaching Thread Error!\n");
-		// Przerwanie dołączania wątku
+
+	if (pthread_join(thread_subtraction, NULL)) {
+		printf(JOIN_THREAD_ERROR_MESSAGE);
 		exit(0);
 	}
-	
-	// Utworzenie wątku mnożenia
-	if(pthread_create(&thread_multiplication, NULL, multiplication, NULL)) {
-	    // Informacja o błędzie podczas tworzenia wątku
-		printf("Creating Thread Error!\n");
-		// Przerwanie tworzenia wątku
+
+	if (pthread_create(&thread_multiplication, NULL, multiplication, NULL)) {
+		printf(CREATE_THREAD_ERROR_MESSAGE);
 		abort();
 	}
-	
-	// Dołączanie wątku mnożenia
-	if(pthread_join(thread_multiplication, NULL)) {
-		printf("Attaching Thread Error!\n");
-		// Przerwanie dołączania wątku
+
+	if (pthread_join(thread_multiplication, NULL)) {
+		printf(JOIN_THREAD_ERROR_MESSAGE);
 		exit(0);
 	}
-	
-	// Utworzenie wątku dzielenia
-	if(pthread_create(&thread_division, NULL, division, NULL)) {
-	    // Informacja o błędzie podczas tworzenia wątku
-		printf("Creating Thread Error!\n");
-		// Przerwanie tworzenia wątku
+
+	if (pthread_create(&thread_division, NULL, division, NULL)) {
+		printf(CREATE_THREAD_ERROR_MESSAGE);
 		abort();
 	}
-	
-	// Dołączanie wątku dzielenia
-	if(pthread_join(thread_division, NULL)) {
-		printf("Attaching Thread Error!\n");
-		// Przerwanie dołączania wątku
+
+	if (pthread_join(thread_division, NULL)) {
+		printf(JOIN_THREAD_ERROR_MESSAGE);
 		exit(0);
 	}
-	
+
 	return 0;
 }

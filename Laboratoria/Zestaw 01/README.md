@@ -9,9 +9,9 @@ Napisz program, który utworzy 3 procesy potomne. Poniższy schemat przedstawia 
 |                               |                Program                   |                            |
 | :---------------------------: | :--------------------------------------: | :------------------------: |
 |           Potomek I           |               Potomek II                 |         Potomek III        |
-| Tworzy pliki P1.txt i P2.txt. | Kopiuje zawartość pliku P1.txt do P2.txt | Tworzy dwa procesy zombie. |
-| Potomek 1 Potomka I - pobiera tekst od użytkownika za pomocą funkcji read i zapisuje do P1.txt. | Potomek 1 potomka II - przesuwa wskaźnik w pliku P2.txt o 10 bajtów w prawo i wyświetli treść. |  |
-|  Potomek 2 Potomka I - tworzy kopię deskryptora pliku P1.txt i z jego użyciem odczytuje tekst z pliku P1.txt | Potomek 2 Potomka II - sprawdza czy P2.txt ma prawo do wykonywania, jeżeli nie to zostanie ono dodane. |  |
+| Tworzy pliki file1.txt i file2.txt | Kopiuje zawartość pliku file1.txt do file2.txt | Tworzy dwa procesy zombie |
+| Potomek 1 Potomka I - pobiera tekst od użytkownika za pomocą funkcji read i zapisuje do file1.txt | Potomek 1 potomka II - przesuwa wskaźnik w pliku file2.txt o 10 bajtów w prawo i wyświetli treść |  |
+|  Potomek 2 Potomka I - tworzy kopię deskryptora pliku file1.txt i z jego użyciem odczytuje tekst z pliku file1.txt | Potomek 2 Potomka II - sprawdza czy file2.txt ma prawo do wykonywania, jeżeli nie to zostanie ono dodane |  |
 
 ### Zadanie 2
 

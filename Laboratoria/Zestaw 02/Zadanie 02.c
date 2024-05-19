@@ -8,73 +8,46 @@
 #include <fcntl.h>
 #include <time.h>
 
-// Main
+const char* START_MESSAGE = "Podaj n: "
+const char* NUMBERS_ARE_EQUAL_MESSAGE = "Liczby sa rowne \n"
+const char* NUMBERS_ARE_DIFFERENT_MESSEGE = "Liczby sa rozne \n"
+
 int main() {
-	// Ustawienie czasu w programie na losowy
-	srand(time(NULL));
-	// Zaalokowanie zmiennej n
 	int n;
-  
-	// Inicjalizacja n ze standardowego wejścia
-	printf("Podaj n: \n");
+
+	srand(time(NULL));
+	printf(START_MESSAGE);
 	scanf("%i", &n);
-	
-	// Zaalokowanie tablicy liczb p
+
 	int p[2];
-	// Otwarcie komunikacji między procesami
 	pipe(p);
-  
-	// Wylosowanie liczby z zakresu od 1 do 100
+
 	int random = (rand() % 100 + 1);
-	// Wyświetlenie komuniaktu o wylosowanej liczbie
 	printf("Wylosowano: %i \n", random);
-  
-	// Pętla iterująca się n - razy
-	for(int i = 0; i < n; i++) {
-		// Utworzenie potomka
-		if(fork()) {
-			// Utworzenie zmiennej potomka
+
+	for (int i = 0; i < n; i++) {
+		if (fork()) {
 			int descendant;
-			
-			// Inicjalizacja zmiennej potomka ze standardowego wejścia
+
 			scanf("%d", &pdescendant);
-			// Zapisanie wielkości liczby potomka do zmiennej p
 			write(p[1], &descendant, sizeof(int));
-			
-			// Sprawdzenie czy potomek jest równy wylosowanej liczbie
-			if(descendant == random) {
-				// Wyświetlenie komunikatu o równości liczb
-				printf("Liczby sa rowne \n");
-			} else {
-				// Wyświetlenie komunikatu o różności liczb
-				printf("Liczby sa rozne \n");
-			}
-			// Wyjście z potomka
+
+			if(descendant == random) printf(NUMBERS_ARE_EQUAL_MESSAGE);
+			else printf(NUMBERS_ARE_DIFFERENT_MESSEGE);
+
 			exit(0);
-		  }
-	}
-	// Zamknięcie komunikacji między procesami
-	close(p[1]);
-
-	// Zaalokowanie bufera buffer
-	int buffer;
-	// Pętla iterująca n - razy
-	for(int i = 0; i < n; i++) {
-		// Odczytywanie wartości w tablicy p za pomocą bufera buffer
-		read(p[0], &buffer, sizeof(buffer));
-		// Wyświetlenie wartości bufera buffer
-		printf("%i \n", buffer);
-
-		// Sprawdzenie czy buffer i wylosowana liczba są równe
-		if(buffer == random) {
-			// Wyświetlenie wiadomości o równości liczb
-			printf("Liczby sa rowne!\n");
-		} else {
-			// Wyświetlenie wiadomości o różności liczb
-			printf("Liczby sa rozne!\n");
 		}
 	}
+	close(p[1]);
 
-	// Zakończenie działania programu
+	int buffer;
+	for (int i = 0; i < n; i++) {
+		read(p[0], &buffer, sizeof(buffer));
+		printf("%i \n", buffer);
+
+		if (buffer == random) printf(NUMBERS_ARE_EQUAL_MESSAGE);
+		else printf(NUMBERS_ARE_DIFFERENT_MESSEGE);
+	}
+
 	return 0;
 }

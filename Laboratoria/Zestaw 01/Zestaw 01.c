@@ -3,184 +3,152 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-// Main
+const char* FILE_PATH1 = "/home/example_user/file1.txt";
+const char* FILE_PATH2 = "/home/example_user/file2.txt";
+const char* STRING_END_SIGN = '\0'
+const char* STRING_SPACE_SIGN = ' '
+
 int main() {
 	// Zadanie 1
-	// Wyświetlenie ID procesu potomnego
-	printf("Proces potomny %i \n", getpid());
+	int programProcessId = getpid()
+	printf("Proces potomny %i \n", programProcessId);
 
-	// Zaalokowanie ścieżek do plików P1 i P2
-	const char* path1 = "/home/tom/Desktop/P1.txt";
-	const char* path2 = "/home/tom/Desktop/P2.txt";
-	
 	// Potomek 1
-	if(fork()) {
-		// Wyświetlenie ID procesu oraz ID procesu potomnego
-		printf("1.Proces %i, potomek %i \n", getpid(), getppid());
-		// Zaalokowanie pliku file1, z możliwością utworzenia, zapisu oraz odczytu
-		int file1 = open("/home/tom/Desktop/P1.txt", O_WRONLY|O_CREAT|O_RDONLY, 0777);
-		// Zaalokowanie pliku file2, z możliwością utworzenia, zapisu oraz odczytu
-		int file2 = open("/home/tom/Desktop/P2.txt", O_WRONLY|O_CREAT|O_RDONLY, 0777);
-		// Potomek 1 potomka 1
-		if(fork()) {
-			// Wyświetlenie ID procesu oraz ID procesu potomnego
-			printf("1.Proces %i, potomek %i \n", getpid(), getppid());
-			// Zaalokowanie buffera znaków buffer1
-			char buffer1[20];
-			// Wczytywanie znaków ze standardowego wejścia do buffera1
-			read(stdin, buffer1, 20);
-			// Zapis danych z buffera1 do pliku file1
-			write(file1, buffer1, 20);
-			
-			// Potomek 1 potomka 1 potomka 1
-			if(fork()) {
-				// Wyświetlenie ID procesu oraz ID procesu potomnego
-				printf("1.Proces %i, potomek %i \n", getpid(), getppid());
-				// Utworzenie kopii deskryptora pliku file1
-				int dup_file1 = dup(file1);
-				// Zaalokowanie buffera znaków buffer2
-				char buffer2[20];
-				// Wczytanie deskryptora pliku dup_file1 do bufera buffer2
-				read(dup_file1, buffer2, 20);
-				
-				// Wyjście z potomka
+	if (fork()) {
+		int firstChildProcessId = getpid()
+		int firstChildParentProcessId = getppid()
+		int file1 = open(FILE_PATH1, O_WRONLY|O_CREAT|O_RDONLY, 0777);
+		int file2 = open(FILE_PATH2, O_WRONLY|O_CREAT|O_RDONLY, 0777);
+		printf("1. Proces %i, potomek %i \n", firstChildProcessId, firstChildParentProcessId);
+
+		// Potomek 1, potomka 1
+		if (fork()) {
+			const int size = 20;
+			char buffer[size];
+			int secondChildProcessId = getpid()
+			int secondChildParentProcessId = getppid()
+			printf("1. Proces %i, potomek %i \n", secondChildProcessId, secondChildParentProcessId);
+
+			read(stdin, buffer, size);
+			write(file1, buffer, size);
+
+			// Potomek 1, potomka 1, potomka 1
+			if (fork()) {
+				char buff[size];
+				int thirdChildProcessId = getpid()
+				int thirdChildParentProcessId = getppid()
+				printf("1.Proces %i, potomek %i \n", thirdChildProcessId, thirdChildParentProcessId);
+
+				int duped_file1 = dup(file1);
+				read(duped_file1, buff, size);
+
 				exit(0);
 			}
-		// Wyjście z potomka
-		exit(0);
-		}
-	// Zamknięcie pliku file1
-	close(file1);
-	// Zamknięcie pliku file2
-	close(file2);
 
-	// Wyjście z potomka
-	exit(0);
+			exit(0);
+		}
+
+		close(file1);
+		close(file2);
+		exit(0);
 	}
 
 	// Potomek 2
-	if(fork()) {
-		// Wyświetlenie ID procesu oraz ID procesu potomnego
-		printf("2.Proces %i, potomek %i \n", getpid(), getppid());
-		// Zaalokowanie pliku file1, z możliwością odczytu
-		int file1 = open("/home/tom/Desktop/P1.txt", O_RDONLY);
-		// Zaalokowanie pliku file2, z możliwością zapisu
-		int file2 = open("/home/tom/Desktop/P2.txt", O_WRONLY);
-		
-		// Zaalokowanie buffera znaków buffer3
-		char buffer3[100];
+	if (fork()) {
+		const int size = 100;
+		char buffer[size];
+		int firstChildProcessId = getpid()
+		int firstChildParentProcessId = getppid()
+		int file1 = open(FILE_PATH1, O_RDONLY);
+		int file2 = open(FILE_PATH2, O_WRONLY);
+		printf("2.Proces %i, potomek %i \n", childProcessId, childParentProcessId);
 
-		// Czytanie danych z pliku file1 do bufera buffer3
-		read(file1, buff3, 100);
-		// Zapis danych z bufera buffer3 do pliku file2
-		write(file2, buff3, 100);
-		
-		// Zamknięcie pliku file1
+		read(file1, buffer, size);
+		write(file2, buffer, size);
+
 		close(file1);
-		// Zamknięcie pliku file2
 		close(file2); 
-		
-		// Potomek 1 potomka 2
-		if(fork()) {
-			// Wyświetlenie ID procesu oraz ID procesu potomnego
-			printf("2.Proces %i, potomek %i \n", getpid(), getppid());
-			// Zaalokowanie pliku file2, z możliwością odczytu
-			int file2 = open("/home/tom/Desktop/P2.txt", O_RDONLY);
 
-			// Zaalokowanie buffera znaków buffer4
-			char buffer4[100];
+		// Potomek 1, potomka 2
+		if (fork()) {
+			char buff[size];
+			int offset = 10;
+			int secondChildProcessId = getpid()
+			int secondChildParentProcessId = getppid()
+			int file2 = open(FILE_PATH2, O_RDONLY);
+			printf("2.Proces %i, potomek %i \n", secondChildProcessId, secondChildParentProcessId);
 
-			// Zmienianie pozycji wskaźnika odczytu deskryptora pliku file2
-			lseek(file2, 10, SEEK_CUR);
-			
-			// Zaalokowanie licznika "i" i zainicjalizowanie jego wartości
-			int i = 0;
-			// Póki buffer4 nie jest pusty
-			while(buffer4[i] != '\0') {
-				// Wartość bufera buffer4[i] jest znakiem spacji
-				buffer4[i] = ' ';
-				// Iteruj dalej
-				i++;
+			lseek(file2, offset, SEEK_CUR);
+
+			int iterator = 0;
+			while (buff[iterator] != STRING_END_SIGN) {
+				buff[iterator] = STRING_SPACE_SIGN;
+				iterator++;
 			}
 
-			// Odczyt zawartości pliku file2 za pomocą bufera buffer4
-			read(file2, buffer4, 100);
-			// Wyświetlenie zawartości pliku przesunietej o 10 bajtów w prawo
-			printf("Tresc pliku przesunieta o 10 bajtow w prawo: %s \n", buffer3);
-			
-			// Zamknięcie pliku file2
+			int bytesShift = 100;
+			read(file2, buff, bytesShift);
+			printf("Tresc pliku przesunieta o 10 bajtow w prawo: %s \n", buffer);
 			close(file2);
-			
-			// Potomek 1 potomka 1 potomka 2
-			if(fork()) {
-				// Wyświetlenie ID procesu oraz ID procesu potomnego
-				printf("2.Proces %i, potomek %i \n", getpid(), getppid());
-				
-				// Jeśli dostęp do pliku ze ścieżki path2 nie jest równy:
-				// Właściciel może odczytać, zapisać oraz wykonać plik
-				// Grupa może odczytać, zapisać oraz wykonać plik
-				// Pozostali mogą jedynie odczytać plik
-				if(access(path2, 0774) != 0) {
-					// Zamień go 0774
-					chmod(path2, 0774);
-				}
-				// Wyjście z potomka
+
+			// Potomek 1, potomka 1, potomka 2
+			if (fork()) {
+				int thirdChildProcessId = getpid()
+				int thirdChildParentProcessId = getppid()
+				printf("2.Proces %i, potomek %i \n", thirdChildProcessId, thirdChildParentProcessId);
+
+				if (access(path2, 0774) != 0) chmod(path2, 0774);
+
 				exit(0);
 			}
-		// Wyjście z potomka
+
+			exit(0);
+		}
+		
 		exit(0);
-		}
-	// Wyjście z potomka
-	exit(0);
 	}
-	
+
 	// Potomek 3
-	if(!fork()) {
-		// Wyświetlenie ID procesu oraz ID procesu potomnego
-		printf("3.Proces %i, potomek %i \n", getpid(), getppid());
-		
-		// Utworzenie procesu zombie numer 1
-		if(!fork()) {
-			// Wyświetlenie ID procesu zombie oraz ID procesu potomnego
-			printf("Zombie nr.1, proces %i, potomek %i \n", getpid(), getppid());
-			// Wyjście z potomka
+	if (!fork()) {
+		int firstChildProcessId = getpid()
+		int firstChildParentProcessId = getppid()
+		printf("3.Proces %i, potomek %i \n", firstChildProcessId, firstChildParentProcessId);
+
+		// Potomek 1, potomka 3
+		if (!fork()) {
+			int firstZombieChildProcessId = getpid()
+			int secondZombieChildParentProcessId = getppid()
+			printf("Zombie nr.1, proces %i, potomek %i \n", firstZombieChildProcessId, firstZombieChildParentProcessId);
 			exit(0);
 		}
-		
-		// Utworzenie procesu zombie numer 2
-		if(!fork()) {
-			// Wyświetlenie ID procesu zombie oraz ID procesu potomnego
-			printf("Zombie nr.2, proces %i, potomek %i \n", getpid(), getppid());
-			// Wyjście z potomka
+
+		// Potomek 2, potomka 3
+		if (!fork()) {
+			int secondZombieChildProcessId = getpid()
+			int secondZombieChildParentProcessId = getppid()
+			printf("Proces zombie nr.2, proces %i, potomek %i \n", secondZombieChildProcessId, secondZombieChildParentProcessId);
 			exit(0);
 		}
-		// Uśpij program na 10 milisekund
+
 		sleep(10);
-		// Poczekaj
 		wait(0);
 	}
-	// Poczekaj
 	wait(0);
-	
+
 	// Zadanie 2
 	// Potomek 4
-	if(fork()) {
-		// Wyświetlenie ścieżki do bieżącego katalogu za pomocą funkcji "execlp()"
-		// oraz komendy "pwd"
-		printf("Sciezka biezacego katalogu: %i \n", execlp("pwd", "pwd", NULL));	
-		// Wyjście z potomka
+	if (fork()) {
+		char commandString[] = "pwd"
+		printf("Sciezka biezacego katalogu: %i \n", execlp(commandString, commandString, NULL));	
 		exit(0);
 	}
-	
+
 	// Potomek 5
-	if(fork()) {
-		// Wyświetlenie listy procesów za pomocą funkcji "execlp()"
-		// oraz komendy "ps"
-		printf("Lista procesow: %i \n", execlp("ps", "ps", NULL));
-		// Wyjście z potomka
+	if (fork()) {
+		char commandString[] = "ps"
+		printf("Lista procesow: %i \n", execlp(commandString, commandString, NULL));
 		exit(0);
 	}
-	
-	// Zakończenie działania programu
+
 	return 0;
 }
