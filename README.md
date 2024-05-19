@@ -31,7 +31,7 @@
   - [Strategia FCFS - czas 3](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20FCFS/Strategia%20FCFS%20-%20czas%2003.png)
 - [Strategia RR](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR)
   - [Kwant 1](https://github.com/tukarp/Operating-Systems/tree/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%201)
-    - [Strategia RR - czas 01](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%201/Strategia%20RR%20kwant%20czasu%201.png)
+    - [Strategia RR - czas 01](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%201/Strategia%20RR%20-%20czas%2001.png)
   - [Kwant 2](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202)
     - [Strategia RR - czas 01](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%20-%20czas%2001.png)
     - [Strategia RR - czas 02](https://github.com/tukarp/Operating-Systems/blob/main/Strategie%20Obs%C5%82ugi%20Proces%C3%B3w/Strategia%20RR/Kwant%202/Strategia%20RR%20-%20czas%2002.png)
