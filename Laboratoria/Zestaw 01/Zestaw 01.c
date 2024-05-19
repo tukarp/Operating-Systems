@@ -44,10 +44,8 @@ int main() {
 
 				exit(0);
 			}
-
 			exit(0);
 		}
-
 		close(file1);
 		close(file2);
 		exit(0);
@@ -101,10 +99,8 @@ int main() {
 
 				exit(0);
 			}
-
 			exit(0);
 		}
-		
 		exit(0);
 	}
 
@@ -129,7 +125,6 @@ int main() {
 			printf("Proces zombie nr.2, proces %i, potomek %i \n", secondZombieChildProcessId, secondZombieChildParentProcessId);
 			exit(0);
 		}
-
 		sleep(10);
 		wait(0);
 	}
